@@ -6,7 +6,7 @@ class App extends Component {
   render() {
     return (
       <div>
-        <Header></Header>
+        <Header heading="Phone Directory" />
         <button>Add</button><br/>
         <label htmlFor="name">Name:</label>
         <input type="text" placeholder="Type here"></input><br/>
