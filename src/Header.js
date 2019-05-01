@@ -1,10 +1,11 @@
 import React from 'react';
+import './Header.css';
 
-const Header = function(props) {
+const Header = function(properties) {
    return (
        <div className="header">
-         {props.heading}
+         {properties.heading}
        </div>
    )
    }
-   export default Header;
+export default Header;
