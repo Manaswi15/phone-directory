@@ -5,13 +5,7 @@ import './App.css';
 
 class App extends Component {
 
-  clickHandler(message)
-    {
-      alert(message);
-    }
-
-  render() {
-    let subscribers = [
+  /*let subscribers = [
       {
         id: 1,
         name: "Shilpa Bhat",
@@ -22,10 +16,24 @@ class App extends Component {
         name: "Srishti Gupta",
         phone: "9999999999"
       }
-    ];
+    ];*/
 
-    
+    construtcor() {
 
+      super();
+      this.state = {
+        subscribersListToShow:[]
+      }
+
+    }
+
+  clickHandler(message)
+    {
+      alert(message);
+    }
+
+  render() {
+   
     return (
       <div>
         <Header heading="Phone Directory" />
@@ -36,7 +44,7 @@ class App extends Component {
             <span className="grid-item phone-heading">Phone</span>
           </div>
           {
-            subscribers.map(sub => {
+            this.subscribersListToShow.map(sub => {
               return <div key={sub.id} className="grid-container">
                 <span className="grid-item">{sub.name}</span>
                 <span className="grid-item">{sub.phone}</span>
